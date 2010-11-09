@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/panelContent" 
+	android:layout_width="240dip"
+  	android:layout_height="240dip"
+	android:background="#999999">    
+	<ListView 
+		android:id="@android:id/list" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/direct_message"
+	    android:layout_alignParentTop="true" />
+	<TextView 
+		android:id="@android:id/empty" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:visibility="gone" 
+	    android:text="@string/repliy_empty"/>	    
+	<RelativeLayout
+		android:id="@+id/direct_message"
+		android:layout_width="fill_parent"
+	  	android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true">    	        	    
+		<EditText
+			android:id="@+id/message_text"
+		    android:layout_width="fill_parent"
+		    android:layout_toLeftOf="@+id/direct_message_button" 
+		    android:layout_height="60dip"
+		    android:singleLine="false"
+		    android:hint="@string/direct_message"
+		    android:layout_alignParentLeft="true"/>
+		<Button 
+			android:layout_alignTop="@+id/message_text"
+			android:layout_alignBottom="@+id/message_text"			
+			android:id="@+id/direct_message_button"
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:text="@string/send"
+		    android:layout_alignParentRight="true"/>
+	</RelativeLayout>
+</RelativeLayout>
